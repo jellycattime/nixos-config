@@ -3,8 +3,10 @@
 {
   programs.git = {
     enable = true;
-    userName = "max";
-    userEmail = "maxim22ananin@gmail.com";
+    settings = {
+      user.name = "max";
+      user.email = "maxim22ananin@gmail.com";
+    };
   };
 
   programs.bash = {
@@ -12,6 +14,12 @@
     shellAliases = {
       ll = "ls -la";
       k = "kubectl";
+
+      # NixOS aliases
+      nixos-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
+      nixos-update = "sudo nixos-rebuild switch --upgrade --flake /etc/nixos#nixos";
+      nixos-clean = "sudo nix-collect-garbage -d";
+      nix-optimise = "sudo nix-store --optimise";
     };
   };
 }
