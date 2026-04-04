@@ -3,7 +3,10 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  programs.firefox.enable = true;
+
   environment.systemPackages = with pkgs; [
+    # System tools
     vim
     wget
     git
@@ -16,7 +19,25 @@
     kubectl
     docker-compose
     kind
-  ];
 
-  programs.firefox.enable = true;
+    # Development
+    vscode
+    code-cursor
+    python3
+    go
+    gopls
+    rustc
+    cargo
+    nodejs_24
+
+    # Apps
+    vlc
+    telegram-desktop
+    spotify
+    yandex-music
+    google-chrome
+    heroic
+    steam
+    transmission_4-qt
+  ];
 }

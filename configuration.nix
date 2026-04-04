@@ -9,6 +9,7 @@
     ./modules/packages.nix
     ./modules/users.nix
     ./modules/nix.nix
+    ./modules/kde-themes.nix
   ];
 
   networking.hostName = "nixos";
