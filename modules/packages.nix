@@ -16,8 +16,8 @@
     # DevOps
     ansible
     terraform
+    terragrunt
     kubectl
-    docker-compose
     kind
 
     # Development
