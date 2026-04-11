@@ -39,5 +39,6 @@
     heroic
     steam
     transmission_4-qt
+    discord
   ];
 }
