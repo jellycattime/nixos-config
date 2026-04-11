@@ -19,7 +19,8 @@
       nixos-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
       nixos-update = "sudo nixos-rebuild switch --upgrade --flake /etc/nixos#nixos";
       nixos-clean = "sudo nix-collect-garbage -d";
-      nix-optimise = "sudo nix-store --optimise";
+      nixos-optimise = "sudo nix-store --optimise";
+      nixos-diff = "nix store diff-closures /run/current-system /run/booted-system";
     };
   };
 }
