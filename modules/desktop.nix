@@ -1,3 +1,4 @@
+# modules/desktop.nix
 { config, pkgs, ... }:
 
 {

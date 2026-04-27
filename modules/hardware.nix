@@ -1,3 +1,4 @@
+# modules/hardware.nix
 { config, pkgs, ... }:
 
 {

@@ -1,3 +1,4 @@
+# modules/kde-themes.nix
 { config, pkgs, ... }:
 
 {

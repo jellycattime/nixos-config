@@ -1,3 +1,4 @@
+# modules/packages.nix
 { config, pkgs, nixpkgs-unstable, ... }:
 
 let
@@ -13,7 +14,65 @@ in
   programs.firefox.enable = true;
 
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [ nss nspr ];
+  programs.nix-ld.libraries = with pkgs; [ 
+    stdenv.cc.cc
+    zlib
+    openssl
+
+    # Glib / GObject (electron)
+    glib
+    glibc
+    libgbm
+
+    # GTK / GUI
+    gtk3
+    gtk4
+    gdk-pixbuf
+    pango
+    cairo
+    atk
+    at-spi2-atk
+    at-spi2-core
+    harfbuzz
+
+    # X11 / Wayland
+    xorg.libX11
+    xorg.libXcomposite
+    xorg.libXdamage
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXrandr
+    xorg.libXrender
+    xorg.libxcb
+    xorg.libXcursor
+    xorg.libXi
+    libxkbcommon
+    wayland
+
+    # Graphics
+    libdrm
+    mesa
+    libGL
+    vulkan-loader
+
+    # Audio
+    alsa-lib
+    libpulseaudio
+
+    # System
+    dbus
+    cups
+    expat
+    nspr
+    nss
+    udev
+
+    # Python native extensions
+    libffi
+    bzip2
+    readline
+    sqlite
+  ];
 
   services.flatpak.enable = true;
   xdg.portal.enable = true;

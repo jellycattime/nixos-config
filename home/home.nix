@@ -1,3 +1,4 @@
+# home/home.nix
 { config, pkgs, ... }:
 
 {

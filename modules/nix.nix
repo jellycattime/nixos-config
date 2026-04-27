@@ -1,3 +1,4 @@
+# modules/nix.nix
 { config, pkgs, ... }:
 
 {

@@ -1,3 +1,4 @@
+# home/programs.nix
 { config, pkgs, ... }:
 
 {
