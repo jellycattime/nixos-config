@@ -5,6 +5,12 @@
 
   programs.firefox.enable = true;
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [ nss nspr ];
+
+  services.flatpak.enable = true;
+  xdg.portal.enable = true;
+
   environment.systemPackages = with pkgs; [
     # System tools
     vim
@@ -19,6 +25,7 @@
     terragrunt
     kubectl
     kind
+    jetbrains.pycharm-oss
 
     # Development
     vscode
@@ -29,6 +36,7 @@
     rustc
     cargo
     nodejs_24
+    electron_40
 
     # Apps
     vlc
@@ -38,7 +46,9 @@
     google-chrome
     heroic
     steam
+    steam-run
     transmission_4-qt
     discord
+    flatpak
   ];
 }
