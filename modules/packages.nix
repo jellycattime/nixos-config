@@ -1,4 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs-unstable, ... }:
+
+let
+  unstable = import nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
+in
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -29,7 +36,7 @@
 
     # Development
     vscode
-    code-cursor
+    unstable.code-cursor
     python3
     go
     gopls
