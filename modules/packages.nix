@@ -97,6 +97,12 @@ in
     vscode
     unstable.code-cursor
     python3
+    python3Packages.pip
+    python3Packages.virtualenv
+    # Inside the project
+    # python -m venv .venv
+    # source .venv/bin/activate
+    # pip install whatever
     go
     gopls
     rustc
