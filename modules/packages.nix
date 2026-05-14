@@ -122,5 +122,6 @@ in
     transmission_4-qt
     discord
     flatpak
+    krita
   ];
 }
