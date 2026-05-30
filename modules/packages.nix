@@ -123,5 +123,7 @@ in
     discord
     flatpak
     krita
+    unrar
+    audacity
   ];
 }
