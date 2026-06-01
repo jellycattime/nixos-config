@@ -19,6 +19,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   swapDevices = [{
     device = "/swapfile";
     size = 8192;
