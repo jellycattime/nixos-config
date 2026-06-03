@@ -125,5 +125,6 @@ in
     krita
     unrar
     audacity
+    onlyoffice-desktopeditors
   ];
 }
