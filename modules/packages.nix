@@ -126,5 +126,6 @@ in
     unrar
     audacity
     onlyoffice-desktopeditors
+    inkscape
   ];
 }
