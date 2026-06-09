@@ -127,5 +127,6 @@ in
     audacity
     onlyoffice-desktopeditors
     inkscape
+    shotcut
   ];
 }
