@@ -128,6 +128,7 @@ in
     onlyoffice-desktopeditors
     inkscape
     shotcut
-    python314Packages.faster-whisper
+    openai-whisper
+    # whisper audio.mp3 --language Russian --output_format srt
   ];
 }
