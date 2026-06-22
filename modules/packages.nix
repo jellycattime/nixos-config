@@ -128,5 +128,6 @@ in
     onlyoffice-desktopeditors
     inkscape
     shotcut
+    python314Packages.faster-whisper
   ];
 }
