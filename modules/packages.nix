@@ -111,6 +111,7 @@ in
     electron_40
 
     # Apps
+    ffmpeg
     vlc
     telegram-desktop
     spotify
@@ -128,7 +129,6 @@ in
     onlyoffice-desktopeditors
     inkscape
     shotcut
-    openai-whisper
-    # whisper audio.mp3 --language Russian --output_format srt
+    kid3
   ];
 }
