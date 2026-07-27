@@ -79,7 +79,7 @@ in
 
   environment.systemPackages = with pkgs; [
     # System tools
-    vim
+    neovim
     wget
     git
     htop
