@@ -108,7 +108,7 @@ in
     rustc
     cargo
     nodejs_24
-    electron
+    electron_43
 
     # Apps
     ffmpeg
