@@ -91,7 +91,7 @@ in
     terragrunt
     kubectl
     kind
-    jetbrains.pycharm
+    jetbrains.pycharm-oss
 
     # Development
     vscode
@@ -131,4 +131,6 @@ in
     shotcut
     kid3
   ];
+
+  nixpkgs.config.allowInsecurePredicate = pkg: true;
 }
