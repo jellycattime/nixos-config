@@ -24,6 +24,11 @@
     size = 8192;
   }];
 
+  boot.kernel.sysctl = {
+      "vm.swappiness" = 100;
+      "vm.vfs_cache_pressure" = 200;
+  };
+
   networking.networkmanager.enable = true;
 
   system.stateVersion = "25.11";
