@@ -10,6 +10,8 @@ in
   services.desktopManager.plasma6.enableQt5Integration = true;
 
   environment.systemPackages = with pkgs; [
+    kdePackages.filelight
+
     # ---------- KDE ----------
     kdePackages.breeze
     kdePackages.breeze-gtk
