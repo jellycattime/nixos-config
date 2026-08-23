@@ -7,7 +7,6 @@ let
   };
 in
 {
-  # Нужно, чтобы Qt5-приложения подхватывали тему Plasma 6
   services.desktopManager.plasma6.enableQt5Integration = true;
 
   environment.systemPackages = with pkgs; [
