@@ -11,6 +11,7 @@ in
 
   environment.systemPackages = with pkgs; [
     kdePackages.filelight
+    kdePackages.isoimagewriter
 
     # ---------- KDE ----------
     kdePackages.breeze
