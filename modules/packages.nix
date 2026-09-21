@@ -36,16 +36,16 @@ in
     harfbuzz
 
     # X11 / Wayland
-    xorg.libX11
-    xorg.libXcomposite
-    xorg.libXdamage
-    xorg.libXext
-    xorg.libXfixes
-    xorg.libXrandr
-    xorg.libXrender
-    xorg.libxcb
-    xorg.libXcursor
-    xorg.libXi
+    libx11
+    libxcomposite
+    libxdamage
+    libxext
+    libxfixes
+    libxrandr
+    libxrender
+    libxcb
+    libxcursor
+    libxi
     libxkbcommon
     wayland
 
