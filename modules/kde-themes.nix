@@ -22,6 +22,10 @@ in
     kdePackages.plasma-workspace-wallpapers
     kdePackages.breeze-plymouth
     kdePackages.kalk
+    kdePackages.breeze-grub
+    kdePackages.koi
+    kdePackages.oxygen-icons
+    kdePackages.sierra-breeze-enhanced
 
     # ---------- Plasma 6 ----------
     klassy
@@ -42,6 +46,9 @@ in
     plasma-overdose-kde-theme
     cyberpunk-neon.kde
     pitch-black
+    arc-kde-theme
+    materia-kde-theme
+    adapta-kde-theme
 
     # ---------- Kvantum ----------
     kdePackages.qtstyleplugin-kvantum
@@ -57,6 +64,15 @@ in
     kdePackages.krohnkite
     kdePackages.karousel
     kdePackages.kzones
+
+    # ---------- GTK ----------
+    whitesur-gtk-theme
+    colloid-gtk-theme
+    orchis-theme
+    graphite-gtk-theme
+    adw-gtk3
+    tokyonight-gtk-theme
+    gruvbox-gtk-theme
 
     papirus-icon-theme
     papirus-folders
@@ -74,6 +90,22 @@ in
     rose-pine-icon-theme
     nordzy-icon-theme
     vimix-icon-theme
+    fluent-icon-theme
+    kora-icon-theme
+    reversal-icon-theme
+    beauty-line-icon-theme
+    windows10-icons
+    oranchelo-icon-theme
+    faba-icon-theme
+    mint-y-icons
+    mint-l-icons
+    papirus-nord
+    catppuccin-papirus-folders
+    kuyen-icons
+    sweet-folders
+    kanagawa-icon-theme
+    cosmic-icons
+    arashi
 
     bibata-cursors
     breeze-hacked-cursor-theme
@@ -88,6 +120,24 @@ in
     rose-pine-cursor
     vimix-cursors
     whitesur-cursors
+    phinger-cursors
+    apple-cursor
+    volantes-cursors
+    openzone-cursors
+    borealis-cursors
+    lyra-cursors
+    comixcursors
+    vanilla-dmz
+    simp1e-cursors
+    google-cursor
+    nightdiamond-cursors
+    afterglow-cursors-recolored
+    gruppled-black-cursors
+    maplestory-cursor
+    banana-cursor
+    pokemon-cursor
+    hackneyed
+    quintom-cursor-theme
 
     # ---------- Themes SDDM (Qt6) ----------
     sddm-astronaut
@@ -95,6 +145,7 @@ in
     catppuccin-sddm-corners
     where-is-my-sddm-theme
     elegant-sddm
+    sddm-sugar-dark
   ];
 
   # SDDM /run/current-system/sw/share/sddm/themes

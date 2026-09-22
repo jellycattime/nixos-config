@@ -91,7 +91,7 @@ in
     terragrunt
     kubectl
     kind
-    jetbrains.pycharm-oss
+    jetbrains.pycharm
 
     # Development
     vscode
