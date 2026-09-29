@@ -82,7 +82,7 @@ in
     neovim
     wget
     git
-    htop
+    btop
     fastfetch
 
     # DevOps
@@ -109,6 +109,8 @@ in
     cargo
     nodejs_24
     electron_43
+    nixd
+    nixpkgs-fmt
 
     # Apps
     ffmpeg
@@ -134,3 +136,5 @@ in
 
   nixpkgs.config.allowInsecurePredicate = pkg: true;
 }
+
+# sudo systemctl restart nix-daemon
