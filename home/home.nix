@@ -4,7 +4,7 @@
 {
   imports = [
     ./programs.nix
-    ./hermes.nix
+    # ./hermes.nix
   ];
 
   home.username = "max";

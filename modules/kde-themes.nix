@@ -76,8 +76,8 @@ in
 
     papirus-icon-theme
     papirus-folders
-    tela-icon-theme
-    tela-circle-icon-theme
+    unstable.tela-icon-theme
+    (tela-circle-icon-theme.overrideAttrs { dontCheckForBrokenSymlinks = true; })
     qogir-icon-theme
     whitesur-icon-theme
     colloid-icon-theme

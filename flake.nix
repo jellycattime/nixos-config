@@ -5,7 +5,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
+    # hermes-agent.url = "github:NousResearch/hermes-agent";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -13,7 +13,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, hermes-agent, ... }: {
+  # outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, hermes-agent, ... }: {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit nixpkgs-unstable; };
@@ -25,7 +26,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.sharedModules = [ hermes-agent.homeManagerModules.default ];
+          # home-manager.sharedModules = [ hermes-agent.homeManagerModules.default ];
           home-manager.users.max = import ./home/home.nix;
         }
       ];
