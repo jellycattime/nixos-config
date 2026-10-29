@@ -18,6 +18,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.blacklistedKernelModules = [ "tiny_power_button" ];
   programs.steam.enable = true;
   hardware.graphics.enable32Bit = true;
   services.envfs.enable = true;
