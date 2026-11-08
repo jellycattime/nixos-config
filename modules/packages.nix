@@ -84,6 +84,7 @@ in
     git
     btop
     fastfetch
+    whisper-cpp
 
     # DevOps
     ansible
@@ -94,6 +95,7 @@ in
     jetbrains.idea
 
     # Development
+    gcc
     vscode
     unstable.code-cursor
     python3
@@ -107,6 +109,9 @@ in
     gopls
     rustc
     cargo
+    rust-analyzer # LSP
+    clippy
+    rustfmt
     nodejs_24
     electron_43
     nixd

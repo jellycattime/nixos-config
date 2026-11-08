@@ -16,12 +16,23 @@
   networking.hostName = "nixos";
   time.timeZone = "Asia/Yerevan";
 
+  services.envfs.enable = true;
+  services.flatpak.enable = true;
+
+  systemd.user.services.flatpak-repos = {
+    description = "Add custom Flatpak remotes";
+    wantedBy = [ "default.target" ];
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak --user remote-add --if-not-exists flatpark https://dl.flatpark.org/flatpark.flatpakrepo
+    '';
+  };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.blacklistedKernelModules = [ "tiny_power_button" ];
   programs.steam.enable = true;
   hardware.graphics.enable32Bit = true;
-  services.envfs.enable = true;
   # boot.kernelParams = [ "usbcore.autosuspend=-1" ];
   # boot.kernelPackages = pkgs.linuxPackages_6_12;
   boot.kernelPackages = pkgs.linuxPackages_zen;
