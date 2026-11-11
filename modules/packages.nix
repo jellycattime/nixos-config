@@ -77,6 +77,10 @@ in
   services.flatpak.enable = true;
   xdg.portal.enable = true;
 
+  environment.variables.RUST_SRC_PATH = "${pkgs.rustPlatform.rustLibSrc}";
+  environment.sessionVariables.PATH = [ "$HOME/.cargo/bin" ];
+  hardware.graphics.enable = true;
+
   environment.systemPackages = with pkgs; [
     # System tools
     neovim
@@ -110,6 +114,7 @@ in
     rustc
     cargo
     rust-analyzer # LSP
+    rustPlatform.rustLibSrc
     clippy
     rustfmt
     nodejs_24
@@ -137,6 +142,7 @@ in
     inkscape
     shotcut
     kid3
+    unstable.zed-editor
   ];
 
   nixpkgs.config.allowInsecurePredicate = pkg: true;
