@@ -3,9 +3,9 @@
   description = "NixOS config";
 
   inputs = {
+    # hermes-agent.url = "github:NousResearch/hermes-agent";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # hermes-agent.url = "github:NousResearch/hermes-agent";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -13,22 +13,37 @@
     };
 
     artcraft.url = "github:ipeglin/artcraft-nix";
+
+    #niri
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
   };
 
   # outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, hermes-agent, ... }: {
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, artcraft, ... }: {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, artcraft, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit nixpkgs-unstable; };
+      specialArgs = { inherit nixpkgs-unstable inputs; };
       modules = [
         ./configuration.nix
-
+        inputs.niri.nixosModules.niri
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          # home-manager.sharedModules = [ hermes-agent.homeManagerModules.default ];
+          home-manager.sharedModules = [ inputs.noctalia.homeModules.default ];
           home-manager.users.max = import ./home/home.nix;
         }
 
