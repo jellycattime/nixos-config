@@ -19,6 +19,8 @@
   services.envfs.enable = true;
   services.flatpak.enable = true;
 
+  systemd.coredump.enable = false;
+
   systemd.user.services.flatpak-repos = {
     description = "Add custom Flatpak remotes";
     wantedBy = [ "default.target" ];
