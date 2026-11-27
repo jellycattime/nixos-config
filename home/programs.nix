@@ -32,13 +32,18 @@
     # theme = "candy";
     plugins = [ "git" "kubectl" "docker" ];
     };
-    
+
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-        
+
     shellAliases = {
       gs = "git status";
       gd = "git diff";
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }

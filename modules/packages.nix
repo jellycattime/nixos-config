@@ -14,7 +14,7 @@ in
   programs.firefox.enable = true;
 
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [ 
+  programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
     zlib
     openssl
@@ -89,14 +89,10 @@ in
     btop
     fastfetch
     whisper-cpp
-
-    # DevOps
-    ansible
-    terraform
-    terragrunt
-    kubectl
-    kind
-    jetbrains.idea
+    bat
+    zoxide
+    fzf
+    gnumake
 
     # Development
     gcc
@@ -109,16 +105,23 @@ in
     # pip install whatever
     go
     gopls
-    rustc
-    cargo
-    rust-analyzer # LSP
+    unstable.rustc
+    unstable.cargo
+    unstable.rust-analyzer # LSP
+    unstable.clippy
+    unstable.rustfmt
     rustPlatform.rustLibSrc
-    clippy
-    rustfmt
     nodejs_24
+    yarn
     electron_43
     nixd
     nixpkgs-fmt
+    unstable.zed-editor
+    exercism
+
+    unstable.solana-cli
+    anchor
+    surfpool
 
     # Apps
     ffmpeg
@@ -127,7 +130,6 @@ in
     spotify
     yandex-music
     google-chrome
-    heroic
     steam
     steam-run
     transmission_4-qt
@@ -137,10 +139,8 @@ in
     unrar
     audacity
     onlyoffice-desktopeditors
-    inkscape
     shotcut
     kid3
-    unstable.zed-editor
   ];
 
   nixpkgs.config.allowInsecurePredicate = pkg: true;
