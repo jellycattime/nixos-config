@@ -1,5 +1,5 @@
 # modules/packages.nix
-{ config, pkgs, nixpkgs-unstable, ... }:
+{ pkgs, nixpkgs-unstable, ... }:
 
 let
   unstable = import nixpkgs-unstable {

@@ -1,5 +1,5 @@
 # home/programs.nix
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [

@@ -16,7 +16,7 @@
   };
 
   # outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, hermes-agent, ... }: {
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, artcraft, ... }: {
+  outputs = { nixpkgs, home-manager, nixpkgs-unstable, artcraft, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit nixpkgs-unstable; };

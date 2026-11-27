@@ -1,5 +1,5 @@
 # modules/kde-themes.nix
-{ config, pkgs, nixpkgs-unstable, ... }:
+{ pkgs, nixpkgs-unstable, ... }:
 let
   unstable = import nixpkgs-unstable {
     system = pkgs.stdenv.hostPlatform.system;
@@ -146,13 +146,5 @@ in
     where-is-my-sddm-theme
     elegant-sddm
     sddm-sugar-dark
-  ];
-
-  # SDDM /run/current-system/sw/share/sddm/themes
-  services.displayManager.sddm.extraPackages = with pkgs; [
-    kdePackages.plasma-desktop
-    kdePackages.qtsvg
-    kdePackages.qtmultimedia
-    kdePackages.qtvirtualkeyboard
   ];
 }

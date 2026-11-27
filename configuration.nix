@@ -1,11 +1,12 @@
 # configuration.nix
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
     ./modules/hardware.nix
     ./modules/desktop.nix
+    ./modules/cosmic.nix
     ./modules/services.nix
     ./modules/packages.nix
     ./modules/users.nix
